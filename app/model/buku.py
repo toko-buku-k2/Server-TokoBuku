@@ -8,7 +8,6 @@ import socket
 import base64
 import imghdr
 
-
 def getNomerBuku() -> str:
     now = date.today()
     bk = db.session.query(Buku).order_by(Buku.id.desc()).first()

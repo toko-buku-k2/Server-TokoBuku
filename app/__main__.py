@@ -1,11 +1,11 @@
 from flask import Flask
 from api import api as api_blueprint
-from config import Config, connect
-
+from config import Config, connect, handle_request
 
 app = Flask(__name__)
 app.register_blueprint(api_blueprint)
 app.config.from_object(Config)
+handle_request(app)
 connect(app)
 
 if __name__ == "__main__":
