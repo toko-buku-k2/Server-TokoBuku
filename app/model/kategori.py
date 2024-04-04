@@ -1,7 +1,5 @@
 from config import db
 
-
-
 def getNomerKategori() -> int:
     bk = db.session.query(Kategori).order_by(Kategori.id.desc()).first()
     if bk:

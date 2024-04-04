@@ -2,7 +2,6 @@ from werkzeug.security import generate_password_hash
 from config import db
 from datetime import date
 
-
 def getNomerUser():
     now = date.today()
     bk = db.session.query(Users).order_by(Users.id.desc()).first()
